@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Transfers</title>
+
+		<!-- Favicons -->
+		<link href="assets/img/favicon.png" rel="icon" />
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
+
+		<!-- Vendor CSS Files -->
+		<link
+			href="assets/vendor/bootstrap/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+			rel="stylesheet"
+		/>
+		<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+		<link
+			href="assets/vendor/glightbox/css/glightbox.min.css"
+			rel="stylesheet"
+		/>
+		<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+		<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
+		<!-- Template Main CSS File -->
+		<link href="assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header id="header" class="fixed-top">
+			<div class="container d-flex align-items-center justify-content-between">
+				<h1 class="logo"><a href="index.html">Resi.</a></h1>
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+				<nav id="navbar" class="navbar">
+					<ul>
+						<li>
+							<a class="nav-link scrollto active" href="./index.html">Home</a>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="./customers.html">Customers</a>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="#">Money Transfer</a>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="./deposit.html">Deposit</a>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="./withdraw.html">Withdraw</a>
+						</li>
+						<!-- <li>
+							<a class="nav-link scrollto" href="#portfolio">Portfolio</a>
+						</li> -->
+						<!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+						<!-- <li class="dropdown">
+							<a href="#"
+								><span>Drop Down</span> <i class="bi bi-chevron-down"></i
+							></a>
+							<ul>
+								<li><a href="#">Drop Down 1</a></li>
+								<li class="dropdown">
+									<a href="#"
+										><span>Deep Drop Down</span>
+										<i class="bi bi-chevron-right"></i
+									></a>
+									<ul>
+										<li><a href="#">Deep Drop Down 1</a></li>
+										<li><a href="#">Deep Drop Down 2</a></li>
+										<li><a href="#">Deep Drop Down 3</a></li>
+										<li><a href="#">Deep Drop Down 4</a></li>
+										<li><a href="#">Deep Drop Down 5</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Drop Down 2</a></li>
+								<li><a href="#">Drop Down 3</a></li>
+								<li><a href="#">Drop Down 4</a></li>
+							</ul>
+						</li> -->
+						<!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+						<li>
+							<a class="getstarted scrollto" href="#">Get Started</a>
+						</li>
+					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				</nav>
+				<!-- .navbar -->
+			</div>
+		</header>
+		<!-- End Header -->
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div
+						class="
+							col-lg-6
+							pt-2 pt-lg-0
+							order-2 order-lg-1
+							d-flex
+							flex-column
+							justify-content-center
+						"
+					>
+						<h1 class="fst-italic">Transfer Money</h1>
+						<ul>
+							<li><i class="ri-check-line"></i> Dolorem ratione dolorum</li>
+							<li>
+								<i class="ri-check-line"></i> Quo nihil natus ea non pariatur
+								optio occaecati
+							</li>
+							<li>
+								<i class="ri-check-line"></i> Duis aute irure dolor in
+								reprehenderit in
+							</li>
+						</ul>
+						<div class="mt-3">
+							<a href="#about" class="btn-get-started scrollto">Get Started</a>
+							<a href="" class="btn-get-quote">Request a Quote</a>
+						</div>
+					</div>
+					<div class="col-lg-6 order-1 order-lg-2 hero-img">
+						<img
+							src="https://i.pinimg.com/564x/cf/fc/75/cffc75be0918d41a641dffdf18f760bd.jpg"
+							class="img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Hero -->
+
+		<!-- Main Part -->
+		<div class="container">
+			<p class="display-1 fst-italic text-muted">Transfer Money</p>
+			<!-- Input Section -->
+			<form class="row" id="add-transfer">
+				<div class="col">
+					<input
+						type="text"
+						class="form-control"
+						name="sender"
+						placeholder="Sender Bank ID"
+						aria-label="Sender Bank ID"
+					/>
+				</div>
+				<div class="col">
+					<input
+						type="text"
+						class="form-control"
+						name="receiver"
+						placeholder="Receiver Bank ID"
+						aria-label="Receiver Bank ID"
+					/>
+				</div>
+				<div class="col">
+					<input
+						type="text"
+						class="form-control"
+						name="amount"
+						placeholder="Amount"
+						aria-label="Amount"
+					/>
+				</div>
+				<div class="col">
+					<button type="submit" class="btn btn-secondary">Transfer</button>
+				</div>
+			</form>
+			<br />
+
+			<!-- Transfer Record -->
+			<ul class="transfers list-unstyled"></ul>
+		</div>
+		<!-- End of Main Part -->
+
+		<!-- Toast Message -->
+		<div
+			aria-live="polite"
+			aria-atomic="true"
+			class="d-flex justify-content-center align-items-center w-100"
+		>
+			<div
+				class="toast align-items-center text-white bg-primary border-0"
+				id="liveToast"
+				role="alert"
+				aria-live="assertive"
+				aria-atomic="true"
+			>
+				<div class="d-flex">
+					<div class="toast-body">Transaction Succesful</div>
+					<button
+						type="button"
+						class="btn-close btn-close-white me-2 m-auto"
+						data-bs-dismiss="toast"
+						aria-label="Close"
+					></button>
+				</div>
+			</div>
+		</div>
+
+		<!-- FIRESTORE DATABASE -->
+		<script>
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			var firebaseConfig = {
+				apiKey: "AIzaSyCZqsMsDLjfbki3KFMUUODC1G4vhUe9828",
+				authDomain: "shrey-s-firestore-demo-project.firebaseapp.com",
+				projectId: "shrey-s-firestore-demo-project",
+				storageBucket: "shrey-s-firestore-demo-project.appspot.com",
+				messagingSenderId: "895792096492",
+				appId: "1:895792096492:web:d4cf1ccf841c160304b1c9",
+				measurementId: "G-4JHCMHGZS6",
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+			// Refence to database
+			const db = firebase.firestore();
+			db.settings({ timestampsInSnapshot: true });
+		</script>
+
+		<!-- Template Main JS File -->
+		<script src="assets/js/transfer.js"></script>
+	</body>
+</html>
